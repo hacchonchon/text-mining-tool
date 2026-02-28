@@ -5,7 +5,7 @@
 日本語テキストを形態素解析し、単語頻度・共起ネットワークを可視化する **macOS 向けデスクトップツール**。
 Tkinter GUI（`app.py`）+ 解析ロジック（`analyzer.py`）の 2 層構成を想定している。
 
-> **注意:** 現在 `app.py` がリポジトリに存在しない。`run.command` が参照しているため、GUI を動作させるには `app.py` の追加が必要。
+`app.py` は tkinter を使った GUI エントリーポイント。`analyzer.py` を呼び出して結果を表示する。
 
 ---
 
@@ -13,6 +13,7 @@ Tkinter GUI（`app.py`）+ 解析ロジック（`analyzer.py`）の 2 層構成�
 
 ```
 text-mining-tool/
+├── app.py             # GUI エントリーポイント（tkinter）
 ├── analyzer.py        # 解析コアロジック（形態素解析・共起計算）
 ├── requirements.txt   # Python 依存ライブラリ
 ├── setup.command      # macOS 向けセットアップスクリプト（bash）
@@ -156,7 +157,7 @@ chore:  設定・依存関係の変更
 
 ## 既知の問題・TODO
 
-- [ ] `app.py`（GUI エントリーポイント）が未追加。`run.command` が参照しているため、ツールとして未完成な状態。
+- [x] `app.py`（GUI エントリーポイント）を追加済み。
 - [ ] テストコードが存在しない。`analyzer.py` の各関数に対するユニットテスト追加を推奨。
 - [ ] Windows / Linux 向けの起動スクリプトが未整備。
 
