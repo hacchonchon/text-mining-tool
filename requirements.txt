@@ -1,0 +1,7 @@
+janome>=0.5.0
+wordcloud>=1.9.0
+matplotlib>=3.7.0
+networkx>=3.1
+openpyxl>=3.1.0
+pillow>=10.0.0
+tkinterdnd2>=0.3.0
